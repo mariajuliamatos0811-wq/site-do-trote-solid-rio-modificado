@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora - Trote 2026</title>
+</head>
+
+<body>
+
+<nav class="menu-principal">
+    <div class="menu-container">
+        <a href="index.html" class="logo"> Trote 2026 </a>
+        <ul class="lista">
+            <li><a href="index.html"> Início </a></li>
+            <li><a href="introducao.html"> Introdução </a></li>
+            <li><a href="formato.html"> Formato </a></li>
+            <li><a href="equipes.html"> Equipes </a></li>
+            <li><a href="provas.html"> Provas & Metas </a></li>
+            <li><a href="integracao.html"> Integração </a></li>
+            <li><a href="cronograma.html"> Cronograma </a></li>
+            <li><a href="calculadora.html"> Calculadora </a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="principal">
+
+<section>
+    <h3>Simulador de Metas Batidas</h3>
+
+    <div class="form-group">
+        <label>Selecione a cor da equipe</label>
+        <select id="cor">
+            <option value="amarela">Amarela</option>
+            <option value="cinza">Cinza</option>
+            <option value="laranja">Laranja</option>
+            <option value="marrom">Marrom</option>
+            <option value="preta">Preta</option>
+            <option value="verde">Verde</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Kit de alimentação</label>
+        <input type="number" id="kitAlimentacao">
+    </div>
+
+    <div class="form-group">
+        <label>Suplemento</label>
+        <input type="number" id="qtdeLatas">
+    </div>
+
+    <div class="form-group">
+        <label>Leite</label>
+        <input type="number" id="qtdeLeites">
+    </div>
+
+    <div class="form-group">
+        <label>Doação de sangue</label>
+        <input type="number" id="qtdeDoacoes">
+    </div>
+</section>
+
+<section>
+    <h3>Itens avulsos</h3>
+
+    <div class="form-group">
+        <label>Arroz</label>
+        <input type="number" id="qtdeArroz">
+    </div>
+
+    <div class="form-group">
+        <label>Feijão</label>
+        <input type="number" id="qtdeFeijao">
+    </div>
+
+    <div class="form-group">
+        <label>Óleo</label>
+        <input type="number" id="qtdeOleo">
+    </div>
+
+    <div class="form-group">
+        <label>Macarrão</label>
+        <input type="number" id="qtdeMacarrao">
+    </div>
+</section>
+
+<section>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado">Pontuação total: 0</div>
+</section>
+
+</main>
+
+<footer class="rodape">
+    <p>Coordenação Trote Solidário 2026</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

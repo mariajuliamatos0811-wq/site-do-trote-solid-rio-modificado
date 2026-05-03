@@ -1,0 +1,936 @@
+body{
+    margin: 0; font-family: 'Segoe UI', sans-serif;
+    background-color: #e6e6e6; color: #242323;
+}
+.menu-principal{
+    background-color: #1E3C72; padding: 15px 0;
+    position: sticky; top: 0; z-index:1000;
+    box-shadow: 0.2px 10px rgba(0,0,0,0,2)
+
+}
+.menu-container {
+    max-width: 1000px; margin: 0 auto; display: flex;
+    justify-content:space-between; align-items:center;
+    padding: 0 20px;
+}
+.logo {
+    color: white; text-decoration: none; font-weight: bold;
+    font-size: 1.2rem; text-transform: uppercase;
+}
+.lista{
+    list-style: none;
+    display: flex; 
+    gap: 20px;
+    margin: 0; 
+    padding: 0;
+}
+.lista a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    }
+.lista a:hover {
+    color: #afb3e5;
+}    
+.valores{
+    list-style: none;
+}
+.cabecalho {
+    background-color: #3e5c92;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.cabecalho-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+.cabecalho-container h2 {
+    font-weight: 300;
+    font-style: italic;
+    color: yellow;
+    
+}
+.principal{
+   max-width: 800px; /* deixa mais estreito */
+    margin: -40px auto 40px;
+    padding: 20px;
+}
+.secao{
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,3);
+}
+.secao.quadro-azul{
+    background-color: #d9e9fcc9;
+    border-left: 6px solid #032f69;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0.3px 10px rgba(0,0,0,0.1);
+}
+.linha-quadros{
+    display: flex;
+    gap: 20px;
+}
+.linha-quadros.secao{
+    flex: 1;
+}
+.horas-atividade{
+    color: #1aa36f;
+    font-weight: 500;
+}
+.horas{
+    list-style: none;
+    padding: 0;
+}
+.horas li{
+    background-color: #d9e9fcc9;
+    border-left: 4px solid #54d38b;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #19e671;
+}
+/* ===== CARDS ===== */
+.card {
+     margin: 0 auto 25px; /* centraliza cada card */
+    background-color: #f5f6f7;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 0 auto 25px;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2d3e50;
+}
+
+/* Texto menor igual da imagem */
+.descricao {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== KIT (caixa pontilhada amarela) ===== */
+.kit {
+    border: 2px dashed #f4b400;
+    background-color: #fffaf0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.kit ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kit li {
+    margin-bottom: 10px;
+    color: #2e7d32;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Check verde */
+.kit li::before {
+    content: "✔";
+    color: green;
+    position: absolute;
+    left: 0;
+}
+
+/* ===== TABELA ===== */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabela th {
+    background-color: #2f4f88;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabela td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+
+/* ===== CARD VERMELHO ===== */
+.vermelho {
+    background-color: #ffecec;
+    border-left: 5px solid #e53935;
+}
+
+/* ===== LISTA FINAL ===== */
+.lista-check {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-check li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.lista-check li::before {
+    content: "✔";
+    color: green;
+    position: absolute;
+    left: 0;
+}
+
+.alerta-texto {
+    color: #ff9800;
+    font-weight: 500;
+}
+.lista-detalhada {
+    list-style: none !important;
+    padding: 0 !important;
+    margin-top: 15px !important;
+}
+
+.lista-detalhada li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+    font-size: 0.95rem !important;
+}
+
+/* CORES + TEXTO */
+.verde { color: #2e7d32 !important; font-weight: 500; }
+.azul { color: #1565c0 !important; font-weight: 500; }
+.laranja { color: #ef6c00 !important; font-weight: 500; }
+.vermelho { color: #c62828 !important; font-weight: 500; }
+.neutro { color: #444 !important; }
+
+/* ÍCONES */
+.verde::before { content: "✔"; }
+.azul::before { content: "📌"; }
+.laranja::before { content: "⚠️"; }
+.vermelho::before { content: "❌"; }
+.neutro::before { content: "•"; }
+/* CARD AMARELO FINAL */
+.destaque-amarelo {
+    background-color: #fff8e1;
+    border-left: 6px solid #f4b400;
+}
+/* Ajuste fino da lista dentro dele */
+.destaque-amarelo li {
+    font-size: 0.95rem;
+}
+.rodape {
+    background-color: #1E3C72; /* azul escuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #f4b400; /* linha amarela */
+    margin-top: 40px;
+}
+
+.rodape p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #032f69;
+}
+.timeline {
+   border-left: 3px solid rgb(20, 4, 114);
+   padding-left: 20px;
+   margin-top: 20px;
+}
+.evento {
+    border: 1px;
+    margin-top: 25px;
+    position: relative;
+}
+.evento ::before {
+    content:  ''; 
+    width: 12px;
+    height: 12px;
+    color: #ff4b2b;
+    border-radius: 50px;
+    position: absolute;
+    left: -28px;
+    top: 5px;
+}
+.grid-locais {
+    border: 1px;
+    display: flex;
+    gap: 20px;
+}
+.local {
+    border: 1px;
+    flex: 1;
+    background: #affaf9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.etapas {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-etapa {
+  flex: 1;
+  background: #e8edf5;
+  border-left: 6px solid #2f5597;
+  padding: 15px;
+  border-radius: 10px;
+}
+.barra {
+  display: flex;
+  margin-top: 15px;
+}
+
+.barra div {
+  flex: 1;
+  background: #2f5597;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.listas {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.listas ul {
+  list-style: none;
+  padding: 0;
+}
+.listas li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #7a5a00;
+}
+.medalhas {
+  background: #f5ecd6;
+  border-left: 6px solid #f4b400;
+}
+.item-medalha {
+  background: #e8edf5;
+  border-left: 5px solid #2f5597;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.info-geral {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+.info-geral h2 {
+  margin-bottom: 10px;
+}
+.info-geral p {
+  font-size: 16px;
+  color: #333;
+}
+.homenagem {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+.homenagem ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.homenagem li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #7a5a00;
+}
+.tabela-avaliacao {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabela-avaliacao thead {
+  background: #2f5597;
+  color: white;
+}
+
+.tabela-avaliacao th,
+.tabela-avaliacao td {
+  padding: 12px;
+  text-align: left;
+}
+
+.tabela-avaliacao tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.lista-criterios {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.lista-criterios li {
+  margin-bottom: 8px;
+  color: #7a5a00;
+  font-size: 16px;
+}
+
+.destaque {
+  background: #f5ecd6;
+  border-left: 6px solid #f4b400;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.principal {
+  flex: 1;
+}
+.lista-equipes {
+  background: white;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.lista-equipes h3 {
+  margin-top: 0;
+}
+
+.lista-equipes p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.lista-equipes table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lista-equipes th {
+  background-color: #2f5597;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.lista-equipes td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lista-equipes tr:hover {
+  background-color: #f5f6f7;
+}
+
+/* QUADRADO DE COR */
+.box-amarela {
+  width: 20px;
+  height: 20px;
+  background-color: gold;
+  border-radius: 4px;
+}
+.lista-valores {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-valores li {
+  margin-bottom: 10px;
+}
+.texto-introducao {
+  background-color: #ffffff; /* azul clarinho */
+  border-left: 6px solid #2f5597;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.lista-valores {
+  list-style: none;
+
+  padding: 0;
+}
+
+.lista-valores li {
+  background-color: #f5ecd6;
+  border-left: 6px solid #2f5597;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.lista-valores li::before {
+  content: "✔";
+  color: green;
+  margin-right: 8px;
+}
+/* ===== PÁGINA FORMATO ===== */
+
+.estrutura {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.estrutura h2 {
+  color: #2f5597;
+}
+
+/* CAIXAS DAS ETAPAS */
+.etapas {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-etapa {
+  flex: 1;
+  background: #e8edf5;
+  border-left: 6px solid #2f5597;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* RESUMO */
+.resumo {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* BARRA AZUL */
+.barra {
+  display: flex;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.barra div {
+  flex: 1;
+  background: #2f5597;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* LISTAS */
+.listas {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.listas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.listas li {
+  background: #f5ecd6;
+  border-left: 5px solid #f4b400;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* MEDALHAS */
+.medalhas {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f5ecd6;
+  border-left: 6px solid #f4b400;
+  border-radius: 10px;
+}
+
+.item-medalha {
+  background: #e8edf5;
+  border-left: 5px solid #2f5597;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.etapas {
+  gap: 30px;
+}
+
+.card-etapa {
+  padding: 25px;
+}
+
+.estrutura {
+  margin: 40px auto;
+}
+/* ===== PÁGINA INTEGRAÇÃO ===== */
+
+/* BLOCO INFORMAÇÕES */
+.info-geral {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #e8edf5;
+  border-left: 6px solid #2f5597;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.info-geral h2 {
+  margin-top: 0;
+  color: #2f5597;
+}
+
+/* BLOCO HOMENAGEM */
+.homenagem {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.homenagem h2 {
+  margin-top: 0;
+  color: #2f5597;
+}
+
+/* LISTA */
+.homenagem ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.homenagem li {
+  background: #f5ecd6;
+  border-left: 5px solid #f4b400;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* TABELA */
+.tabela-avaliacao {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabela-avaliacao thead {
+  background: #2f5597;
+  color: white;
+}
+
+.tabela-avaliacao th,
+.tabela-avaliacao td {
+  padding: 12px;
+  text-align: left;
+}
+
+.tabela-avaliacao tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.tabela-avaliacao tr:hover {
+  background-color: transparent;
+}
+
+/* CARDS ABAIXO */
+.card {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* CARD DESTAQUE */
+.destaque {
+  background: #fff8e1;
+  border-left: 6px solid #f4b400;
+}
+
+/* LISTA CRITÉRIOS */
+.lista-criterios {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.lista-criterios li {
+  background: #e8edf5;
+  border-left: 5px solid #2f5597;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+/* ===== PÁGINA CRONOGRAMA ===== */
+
+/* BLOCO GERAL */
+.timeline {
+  max-width: 900px;
+  margin: 30px auto;
+  padding-left: 30px;
+  border-left: 4px solid #2f5597;
+  position: relative;
+}
+
+/* CADA EVENTO */
+.evento {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  background: #f5f6f7;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* BOLINHA DA TIMELINE */
+.evento::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: #2f5597;
+  border-radius: 50%;
+  position: absolute;
+  left: -37px;
+  top: 20px;
+}
+
+/* DATA */
+.evento strong {
+  color: #2f5597;
+  font-size: 1rem;
+}
+
+/* TEXTO */
+.evento p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* SEÇÃO LOCAIS */
+.grid-locais {
+  max-width: 900px;
+  margin: 30px auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* CAIXAS DE LOCAL */
+.unidade {
+  flex: 1;
+  background: #e8edf5;
+  border-left: 6px solid #2f5597;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.unidade h4 {
+  margin-top: 0;
+  color: #2f5597;
+}
+/* ===== PÁGINA CALCULADORA ===== */
+
+/* CAIXA GERAL */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUTS E SELECT */
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* GRID DOS ITENS */
+.form-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-grid .form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* BOTÃO */
+button {
+  background: #2f5597;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #1d3f73;
+}
+
+/* RESULTADO */
+.resultado-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8edf5;
+  border-left: 6px solid #2f5597;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* SEÇÕES MAIS BONITAS */
+main section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+/* ===== EQUIPES BONITO ===== */
+
+.equipes {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 950px;
+    margin: 40px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.equipes h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #1E3C72;
+    margin-bottom: 10px;
+}
+
+.equipes p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ===== TABELA ===== */
+
+.tabela-pontuacao {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* cabeçalho */
+.tabela-pontuacao thead {
+    background: linear-gradient(90deg, #1E3C72, #2f5597);
+    color: white;
+}
+
+.tabela-pontuacao th {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* linhas */
+.tabela-pontuacao td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* linhas alternadas */
+.tabela-pontuacao tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* efeito hover */
+.tabela-pontuacao tbody tr {
+    transition: all 0.2s ease;
+}
+
+.tabela-pontuacao tbody tr:hover {
+    background-color: #e8edf5;
+    transform: scale(1.01);
+}
+/* ===== CORES DAS EQUIPES (SEM EMOJI) ===== */
+
+.cor-amarelo { background: #f4b400; }
+.cor-cinza { background: #9e9e9e; }
+.cor-laranja { background: #ff9800; }
+.cor-bordo { background: #800020; }
+.cor-preto { background: #000; }
+.cor-rosa { background: #e91e63; }
+.cor-roxo { background: #6a1b9a; }
+.cor-verde { background: #2e7d32; }
+.cor-vermelho { background: #e53935; }
+
+/* quadradinhos */
+.tabela-pontuacao td div {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
